@@ -21,7 +21,7 @@ SERIALOUTPUT=$(ioreg -l | grep IOPlatformSerialNumber)
 #SERIAL=$(echo $SERIAL | sed 's/^.//;s/.$//')
 SERIAL=$(echo $SERIALOUTPUT | sed -n 's/.*"IOPlatformSerialNumber" = "\([^"]*\)".*/\1/p')
 
-exit(1)
+exit
 # Prompt to ask if user wants to erase the drive
 read -p "Status: Would you like to erase the drive? (yes/no): " ERASE_DRIVE
 
